@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <!--add this to every page as well for parse DB*/-->
+      <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+    
+    <title>DoD Beneficiary Sign Up Page</title>
+</head>
+<body>
+	<header>
+        <nav>
+        <a  id="navlinks" href="Index.html"><img src="img/home.png" width="35" height="35"></a>
+		<a  id="navlinks" href="signup.html"> &nbsp; Sign Up&nbsp; </a>
+		<a  id="navlinks" href="login.html"> &nbsp;Log In&nbsp; </a>
+		</nav>
+        <br><br>
+      <h1>DOD Beneficiary Web Site Sign Up</h1>
+    </header>
+	
+     <div style="display:none" class="error">
+      Looks like there was a problem saving the object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
+    </div>
+
+    <div style="display:none" class="success">
+      <p>We've just created a new user</p>
+      
+        
+      </div>
+      
+    	
+    		
+ 
+        
+    		
+    </div> 
+   <div id="familyForm">
+    	<form action="includes/signup.php" method="post">
+            
+            <div id="field">Username: <input type="text" name="username" id="username"> <span id="usernameError"></span> <br /></div>
+    		<div id="field">Password: <input type="password" name="password" id="password"> <span id="passwordError"></span> <br /></div>
+			<div id="field">Re-Type Password: <input type="password" id="password2"> <span id="passwordError2"></span> <br /></div>
+            <div id="field">Email: <input type="email" name="email" id="email"> <span id="emailError"></span><br /></div>
+            <div id="field">First Name: <input type="text" name="firstname" id="firstName"> <span id="firstNameError"></span><br /></div>
+            <div id="field">Last Name: <input type="text" name="lastname" id="lastName"> <span id="lastNameError"></span><br /></div>
+            <div id="field">Gender: <select name="gender" id="gender">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    </select> <span id="genderError"></span><br /></div>
+            <div id="field">Phone Number: <input type="text" name="phone" id="phone"> <span id="phoneError"></span><br /></div>
+            <div id="field">Pay Grade: <input type="text" name="pay" id="pay"> <span id="payGradeError"></span><br /></div>
+            <div id="field">Date of Birth: <input type="date" name="dob" id="dob"> <span id="dobError"></span><br /></div>
+            <div id="field">Date of Last Deployment: <input type="date" name="lastDeployment" id="lastDeployment"> <span id="deploymentError"></span><br /></div>
+            
+    		<input type="submit" value="Sign Up!" id="signUp"> <br />
+       </form>
+    </div> 
+    
+   
+		
+	<footer>
+    	<p>&copy; Copyright  by Nickolas Zarzosa, Alex Lamont, Michael Goita-Sarmiento</p>
+    </footer>
+    
+
+</body>
+</html>

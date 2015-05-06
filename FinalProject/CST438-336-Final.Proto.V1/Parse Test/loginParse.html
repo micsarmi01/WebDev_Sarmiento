@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <!--add this to every page as well for parse DB*/-->
+      <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+    <script src="js/login.js"></script>
+    
+    <title>DoD Beneficiary Log In Page</title>
+</head>
+<body>
+	<header>
+      <h1>DOD Beneficiary Web Site Log In</h1>
+    </header>
+	
+     <div style="display:none" class="error">
+      Looks like there was a problem Logging In.
+
+         </div>
+             
+         
+    <div style="display:none" class="success">
+      <p>We've just logged in</p>
+      
+        
+      </div>
+    
+    <div id="fieldsetDiv">
+    	
+    		Username: <input type="text" id="username"> <span id="usernameError"></span> <br />
+    		Password: <input type="password" id="password"> <span id="passwordError"></span> <br />
+			
+        
+    		<input type="button" value="Log In!" id="logIn"> <br />
+    </div> 
+    
+  
+		
+	<footer>
+    	<p>&copy; Copyright  by Nickolas Zarzosa, Alex Lamont, Michael Goita Sarmiento</p>
+    </footer>
+    
+    <script>
+        
+               
+  $("#login").click($.getScript("my_lovely_script.js", function(){
+
+   alert("Script loaded and executed.");
+
+   // Use anything defined in the loaded script...
+}));</script>
+
+</body>
+</html>

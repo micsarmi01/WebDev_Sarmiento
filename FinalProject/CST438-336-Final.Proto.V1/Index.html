@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>DOD Beneficiary Login</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	
+	<!-- JAVASCRIPT to clear search text when the field is clicked -->
+	<script>
+		window.onload = function(){ 
+	//Get submit button
+	var submitbutton = document.getElementById("tfq");
+	//Add listener to submit button
+	if(submitbutton.addEventListener){
+		submitbutton.addEventListener("click", function() {
+			if (submitbutton.value == 'Search our website'){//Customize this text string to whatever you want
+				submitbutton.value = '';
+			}
+		});
+	}
+	</script>
+	
+	<style type="text/css">
+	#tfheader{
+		
+	}
+	#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput2{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		color:#666;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton2 {
+		margin: 0;
+		padding: 5px 7px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		font-weight:bold;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton2:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton2::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+        
+    
+</style>
+
+</head>
+
+<body>
+  <div>
+    <header>
+         <nav>
+        <a  id="navlinks" href="Index.html"><img src="img/home.png" width="35" height="35"></a>
+		<a  id="navlinks" href="signup.html"> &nbsp; Sign Up&nbsp; </a>
+		<a  id="navlinks" href="login.html"> &nbsp;Log In&nbsp; </a>
+		</nav>
+    </header>
+      <br><br>
+    <body>
+        <img id="banner" src="img/banner2.png">
+        
+      
+   
+	  <div>
+        
+      </div>
+	  <!-- HTML for SEARCH BAR -->
+	<div id="tfheader">
+		<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" value="Search our website"><input type="submit" value=">" class="tfbutton2">
+		</form>
+		<div class="tfclear"></div>
+	</div>
+        
+	<div>
+        search for local 
+        </div>
+        
+        
+        
+    <div id="fieldsetDiv">
+    	<form action="includes/loginProcess.php" method="post">
+            
+    		Username: <input type="text" name="username" id="username"> <span id="usernameError"></span> <br />
+    		Password: <input type="password" name="password" id="password"> <span id="passwordError"></span> <br />
+    		<input type="submit" value="Login!" name="loginForm"/>
+            adminzxy/adminzxy
+            
+        </form>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+      <div id="signup">
+          <img src="img/signup2.png" width="200" height="60" style="float: left; padding-left: 15 px;">
+        </div>
+
+        
+            <div style="display:none" class="showForm">
+                
+              <div id="familyForm">
+                  
+    	<form action="includes/signup.php" method="post">
+            <h4 id="signupForm">Sign Up!</h4>
+            <div id="field">Username: <input type="text" name="username" id="username"> <span id="usernameError"></span> <br /></div>
+    		<div id="field">Password: <input type="password" name="password" id="password"> <span id="passwordError"></span> <br /></div>
+			<div id="field">Re-Type Password: <input type="password" id="password2"> <span id="passwordError2"></span> <br /></div>
+            <div id="field">Email: <input type="email" name="email" id="email"> <span id="emailError"></span><br /></div>
+            <div id="field">First Name: <input type="text" name="firstname" id="firstName"> <span id="firstNameError"></span><br /></div>
+            <div id="field">Last Name: <input type="text" name="lastname" id="lastName"> <span id="lastNameError"></span><br /></div>
+            <div id="field">Gender: <select name="gender" id="gender">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    </select> <span id="genderError"></span><br /></div>
+            <div id="field">Phone Number: <input type="text" name="phone" id="phone"> <span id="phoneError"></span><br /></div>
+            <div id="field">Pay Grade: <input type="text" name="pay" id="pay"> <span id="payGradeError"></span><br /></div>
+            <div id="field">Date of Birth: <input type="date" name="dob" id="dob"> <span id="dobError"></span><br /></div>
+            <div id="field">Date of Last Deployment: <input type="date" name="lastDeployment" id="lastDeployment"> <span id="deploymentError"></span><br /></div>
+            
+    		<input type="submit" value="Sign Up!" id="signUp"> 
+            
+                
+            <input type="button" id="close" value="Close">
+       </form>
+       
+         </div>
+        </div>
+        
+        <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br><br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br> <br> <br> <br>
+ </body>
+      
+	<footer>
+    	<p>&copy; Copyright  by Nickolas Zarzosa, Alex Lamont, Michael Goitia-Sarmiento</p>
+        <a href="adminLogin.php">ADMIN</a>
+    </footer>
+    
+	<script>
+    $("#signup").click( function(){
+            
+            //$(this).css("display","none");
+            $(".showForm").show();
+    } );
+     $("#close").click( function(){
+            
+            //$(this).css("display","none");
+            $(".showForm").hide();
+    } );
+     
+  </script>
+      
+  </div>
+</body>
+</html>
+
+
+
