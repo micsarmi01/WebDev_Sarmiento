@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Lab 6: Mike G</title>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    
+    <style>
+     #q1 img { cursor: pointer}
+    </style>
+</head>
+<body>
+
+    
+    <h1> Vocabulary Quiz </h1>
+    
+    <div id="q1">
+        
+        1. Click on "El pollito" <br />
+
+        <img id="cat" src="img/cat.png" alt="Cat" width="100px">
+        <img id="chicken" src="img/chicken.png" alt="Chicken" width="100px">
+        <img id="dog" src="img/dog.png" alt="Dog" width="100px">
+        <img id ="mouse" src="img/mouse.png" alt="Mouse" width="100px">
+
+    </div>       
+    <br>
+    <div id="q2Div">
+         
+        2. What is "Dog" in Spanish?
+        <input type="text" id="q2">
+         
+    </div>
+<br>
+    <div id="q3Div">
+         
+        3. What is "Cat" in Spanish?<br>
+        <input type="radio" name="q3" value="perro"> Perro <br />
+        <input type="radio" name="q3" value="raton"> Raton <br />
+        <input type="radio" name="q3" value="gato"> Gato <br />
+        <input type="radio" name="q3" value="pollo"> Pollo <br />
+         
+    </div>
+    
+    
+    <script>
+    
+        $("#q1 img").mouseenter(  function(){
+            $(this).css("width","130px");
+        }  );
+
+        $("#q1 img").mouseleave(  function(){
+            $(this).css("width","100px");
+        }  );
+        
+        $("#q1 img").click(  function(){
+            $("img").css("border","");
+            $(this).css("border","1px solid black");
+            //alert($(this).attr("id"));
+            q1_answer = $(this).attr("id");
+            
+        }  );
+        
+        $("#submitQuiz").click( function(){
+            
+            if (q1==answer)
+            
+        })
+        
+    </script>
+    
+</body>
+</html>

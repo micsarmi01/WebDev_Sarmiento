@@ -1,0 +1,139 @@
+/*
+    Document   : Assignments/a1/css/style．css
+    Created on : 2015-02-02 09:53 PM
+    Author     : misarmiento
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+.positive{
+    color: red; 
+    background-color: lightblue;
+}
+.negative{
+    color: green;  
+    background-color: lightblue;
+}
+.agile{
+    height: 350px; !important
+     width: 450px;
+     margin-left: auto;
+            margin-right: auto;
+    background-color:white;
+}
+.spiral{
+    background:white;
+    height: 350px;
+     width: 400px;
+     margin-left: auto;
+            margin-right: auto;
+}
+
+#maintext{
+    float: right;
+    background:#dbdbdb;
+    padding: 20px;
+    
+}
+
+#imageborder{
+    padding: 20px;
+    float: left;
+}
+ p{
+     color: white;
+     padding: 20px;
+ }
+
+ img {
+              height: 350px;
+              width: 350px;
+              
+            border: black 10px solid;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            float:right;
+        }
+        
+        img:hover {
+            
+            opacity: .5;
+            border: 1px solid blue;
+            transition: all 2s;
+            
+        }
+    body{
+            font-family: Verdana, Arial, Times New Roman;
+            
+            
+        }
+
+    nav {        margin: auto;
+            text-align: center;
+            background: lightgreen;
+    }
+
+    nav a{
+            
+            padding: 10px;
+            padding-top:10px;
+            padding-bottom:10px;
+            border-radius: 25px; 
+            
+           
+
+        }
+
+    nav a:hover{
+             
+             color:white;
+             background: blueviolet;
+
+         }
+     #wrapper{
+            width: 1200px;
+            margin: auto;
+            background: grey;
+            padding: 20px;
+            border-radius: 25px; 
+        }
+
+    #mainHeader{
+            background: Black; 
+            color: white !important;
+            text-align: center;
+            
+        }
+
+ .currentPage{
+            color:white;
+            padding-top: 15px;
+             background-color: #0101af;
+        }
+  figcaption{
+            
+            color:red;
+            float: left;
+            
+        }
+
+ .listStyle{
+            color: red;
+        }
+        
+        li{
+            type="square";
+        }
+ .secondlistStyle{
+            color: blue;
+        }
+.negativelistStyle{
+      background-color:white;
+          color: red;
+}
+.positivelistStyle{
+    background-color:white;
+    color: green;
+}
+        

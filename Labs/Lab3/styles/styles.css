@@ -1,0 +1,31 @@
+/*
+    Document   : Labs/Lab3/styles/styles.css
+    Created on : 2015-03-02 05:00 PM
+    Author     : misarmiento
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+
+ body{
+            background-image: url("img/hackers.jpg");
+            font-family: Verdana, Arial, Times New Roman;
+            background: #1c3c6d;
+           
+        }
+
+ #mainHeader{
+            background: yellow; 
+            color: green !important;
+            text-align: center;
+            
+        }
+
+ #wrapper{
+            width: 500px;
+            margin: auto;
+            background: #e2e2e2;
+            padding: 10px;
+            border-radius: 15px; 
+        }

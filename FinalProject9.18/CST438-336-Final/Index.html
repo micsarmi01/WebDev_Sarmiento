@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>DOD Beneficiary Login</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	
+	<!-- JAVASCRIPT to clear search text when the field is clicked -->
+	<script>
+		window.onload = function(){ 
+	//Get submit button
+	var submitbutton = document.getElementById("tfq");
+	//Add listener to submit button
+	if(submitbutton.addEventListener){
+		submitbutton.addEventListener("click", function() {
+			if (submitbutton.value == 'Search our website'){//Customize this text string to whatever you want
+				submitbutton.value = '';
+			}
+		});
+	}
+	</script>
+	
+	<style type="text/css">
+	#tfheader{
+		background-color:#c3dfef;
+	}
+	#tfnewsearch{
+		float:right;
+		padding:20px;
+	}
+	.tftextinput2{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		color:#666;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton2 {
+		margin: 0;
+		padding: 5px 7px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		font-weight:bold;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton2:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton2::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+</style>
+
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>DOD Beneficiary Web Site Login</h1>
+    </header>
+	  
+	  <!-- HTML for SEARCH BAR -->
+	<div id="tfheader">
+		<form id="tfnewsearch" method="get" action="http://www.google.com">
+		        <input type="text" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" value="Search our website"><input type="submit" value=">" class="tfbutton2">
+		</form>
+		<div class="tfclear"></div>
+	</div>
+	
+    <div id="fieldsetDiv">
+    	<form action="includes/loginProcess.php" method="post">
+    		Username: <input type="text" name="username" id="username"> <span id="usernameError"></span> <br />
+    		Password: <input type="password" name="password" id="password"> <span id="passwordError"></span> <br />
+    		<input type="submit" value="Login!" name="loginForm"/>
+        </form>
+       
+	<footer>
+    	<p>&copy; Copyright  by Nickolas Zarzosa, Alex Lamont, Michael Goitia-Sarmiento</p>
+        adminzxy/adminzxy
+    </footer>
+    </div>
+	  
+  </div>
+</body>
+</html>
+
+
+

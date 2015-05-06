@@ -1,0 +1,65 @@
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Hackathon Sign Up</title>
+    <link href="styles/styles.css" rel="stylesheet"/>
+    
+</head>
+<body background="img/hackers.jpg">
+    <h1 id="mainHeader"> Ideas of March - Regestration Form</h1>
+    
+    <div id="wrapper">
+    <form method="post" action="signup.php">
+    
+        
+       <strong> First Name: </strong>  <input type="text" name="fName" size="15" placeholder="Enter your first name" required>
+        <br> <br>
+        <strong>First Name:</strong> <input type="text" name="lName" size="15" placeholder="Enter your last name" required>
+        <br> <br>
+       
+        <strong>email:</strong> <input type="email" name="email" size="15" placeholder="Enter your email" required>
+        <br> <br>
+        
+        
+    <strong>College:</strong>
+    <select name="college">
+        <option value="CSUMB">CSUMB</option>
+        <option value="MPC">MPC</option>
+        <option value="Cabrillo">Cabrillo</option>
+        <option value="Gavilan">Gavlan</option>
+        
+    </select>
+    
+    
+        <br/><br/>
+        
+        <strong>College Level:</strong><br/>
+        <input type="radio" name="year" value="Freshman"> Freshman <br/>
+        <input type="radio" name="year" value="Sophmore"> Sophmore <br/>
+        <input type="radio" name="year" value="Junior"> Junior <br/>
+        <input type="radio" name="year" value="Senior"> Senior <br/>
+
+        <br/>
+        <Strong>Gender:</Strong> <br />
+        <input type="radio" name="gender" value="M"> Male <br/>
+        <input type="radio" name="gender" value="F"> Female <br/>
+        
+        <br>
+        <Strong>Select app types you are interested in:</Strong><br / >
+        <input type="checkbox" name="appType[]" value="Games"> Games<br/>
+        <input type="checkbox" name="appType[]" value="Business"> Business<br/>
+        <input type="checkbox" name="appType[]" value="Something"> Something<br/>
+        <input type="checkbox" name="appType[]" value="Education"> Education<br/>
+        <input type="checkbox" name="appType[]" value="Health"> Health<br/>
+        
+        <br>
+        <input type="submit" value="Sign up!"/>
+        
+    </form>
+    </div>
+
+</body>
+</html>

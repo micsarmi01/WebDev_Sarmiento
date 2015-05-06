@@ -1,0 +1,108 @@
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 6: Michael Sarmiento</title>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <style>
+        #q1 img { cursor: pointer}
+        .feedback{
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Vocabulary Quiz</h1><br />
+    
+    <div id="q1">
+        
+    
+    1. Click on "El pollito" <br />
+    <img id="cat" src="img/cat.png" alt="Cat" width="100px">
+    <img id="chicken" src="img/chicken.png" alt="chicken" width="100px">
+    <img id="dog" src="img/dog.png" alt="dog" width="100px">
+    <img id="mouse" src="img/mouse.png" alt="mouse" width="100px">
+    </div>
+    
+    <div id ="feedback1" class="feedback">
+        <h2>Answer: </h2>
+        This is "El pollito" <br />
+        <img id="chicken" src="img/chicken.png" alt="chicken" width="100px">
+    </div>
+    
+    
+    
+    
+    
+    <div id="q2Div">
+        2 what is "Dog" in Spanish?<br />
+        <input type="text" id="q2">
+        <div id="feedback2" class="feedback">
+            
+        </div>
+        
+        
+    </div>
+    
+    <div id="q3Div">
+        3. What is "Cat" in spanish? <br />
+        <input type="radio" name="q3" value="perro">Perro<br />
+        <input type="radio" name="q3" value="raton">Raton<br />
+        <input type="radio" name="q3" value="gato">Gato<br />
+        <input type="radio" name="q3" value="pollo">Pollo<br />
+    </div>
+    
+    <input type="button" value="Submit" id="submitQuiz">
+    <h2 id ="score">Score</h2>
+    
+    <script>
+        var q1Answer;
+        var score = 0;
+        $("#q1 img").mouseenter(function(){
+            $(this).css("width","120px")
+        });
+        $("#q1 img").mouseleave(function(){
+            $(this).css("width","100px")
+        });
+        $("#q1 img").click(function(){
+            $("#q1 img").css("border", "")
+            $(this).css("border","1px solid black")
+            alert($(this).attr("id"));
+            q1Answer = $(this).attr("id");
+        });
+        
+        $("#submitQuiz").click(function(){
+            //$(".feedback").css("display", "block")
+            //$(".feedback").slideToggle(400);
+            
+            if (q1Answer == "chicken"){
+                score += 20;
+                $("#feedback1").css("background-color","rgba(179, 226, 170,1)");
+            }
+            else{
+                $("#feedback1").css("background-color","rgba(200, 10, 51,1)");
+            }
+            
+            var q2_answer = $("#q2").val().toLowerCase();  //what user typed in
+            
+            if (q2_answer == "perro"){
+                score += 20;
+            }
+            
+            var q3_answer = $("input[name = 'q3']:checked").val();
+            
+            if(q3_answer == "gato"){
+                score += 20;
+            }
+            
+            $("#score").html("Your score is: "+ score);
+            
+            
+        })
+    </script>
+        
+</body>
+</html>

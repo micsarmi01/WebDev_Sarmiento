@@ -1,0 +1,66 @@
+#fieldsetDiv
+{
+	color: black;
+	width: 700px;
+	margin: auto;
+	background: silver;
+	padding: 25px;
+	border-radius: 15px;
+}
+
+footer
+{
+	text-align: center;
+}
+
+h1
+{
+	text-align:center;
+}
+
+nav 
+{
+	background:gray;
+    width:100%;
+    
+}
+
+#navlinks
+{
+	
+    margin: 0px;
+    color: white;
+	background: gray;
+    border-style: dotted;
+    border-right-color: #474747;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+	text-align:left;
+    text-decoration: none !important;
+    padding-top:20px;
+    
+}
+#logout
+{
+	
+    margin: 0px;
+    color: #d8a600;
+	background: gray;
+	text-align:left;
+    text-decoration: none !important;
+    padding-top:20px;
+    float: right;
+    vertical-align: middle;
+    
+}
+
+body{
+            font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+            background-image: url("http://i.imgur.com/FJU25B3.png");
+            margin: 0px;
+            
+        }
+#user-info{
+    float: right;
+}

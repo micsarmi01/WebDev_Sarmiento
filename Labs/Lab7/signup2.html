@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Lab 7: Miguel Lara</title>
+  <meta name="description" content="">
+  <meta name="author" content="lara4594">
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  
+  <script>
+      
+      function getCity() {  
+      
+     $.ajax({
+            type: "get",
+            url: "http://hosting.otterlabs.org/laramiguel/ajax/zip.php",
+            dataType: "json",
+            data: {"zip_code": $("#zip").val() },
+            success: function(data,status) {
+                 //alert(data['city']);
+                 $("#city").html(data['city']);
+                 $("#longitude").html(data['longitude']);
+                 $("#latitude").html(data['latitude']);
+            },
+            complete: function(data,status) { //optional, used for debugging purposes
+                 // alert(status);
+            }
+         });
+     }
+
+
+      function getCounties() {  
+      
+     $.ajax({
+            type: "get",
+            url: "http://hosting.otterlabs.org/laramiguel/ajax/countyList.php",
+            dataType: "json",
+            data: {"state": $("#state").val()},
+            success: function(data,status) {
+                //alert(data['counties']);
+                $("#county").html("<option> Select One </option>");
+                 for (var i=0; i< data['counties'].length; i++){
+                     $("#county").append("<option>" + data["counties"][i].county + "</option>" );
+                }
+            },
+            complete: function(data,status) { //optional, used for debugging purposes
+                //alert(status);
+            }
+         });
+     }
+      
+      
+      function checkUsername() {  
+      
+    if($("#username").val().length < 4){
+        
+        //$("#usernameError").html("Username must have at least 4 characters");
+        displayError("#username","Username must have at least 4 characters");
+        return false;
+        
+    }  
+    
+     $.ajax({
+            type: "get",
+            url: "http://hosting.otterlabs.org/laramiguel/cst336/labs/lab7/verifyUsername.php",
+            dataType: "json",
+            data: {"username": $("#username").val() },
+            success: function(data,status) {
+                //alert(data['exists']);
+                if(data['exists']) {
+                    $("#usernameError").html("Username already taken!!");
+                    $("#username").css("background-color","red");
+                    $("#username").focus();
+                    $("#usernameError").css("color", "red");
+                }
+                else{
+                    $("#usernameError").html("Username available");
+                    $("#usernameError").css("color", "green");
+                }
+            },
+            complete: function(data,status) { //optional, used for debugging purposes
+                 // alert(status);
+            }
+         });
+     }      
+      
+      function displayError(id, message){
+          $(id + "Error").html(message);
+        $(id).css("background-color","red");
+        $(id).focus();
+        $(id + "Error").css("color", "red");
+      }
+      
+      function checkPassword(){
+          if($("#password").val().length < 6){
+              displayError("#password", "Password must have at least 6 characters");
+              return false;
+          }
+          
+          if (!/\d/.test($("#password").val())) {
+              displayError("#password", "Password must have at least 1 digit");
+              return false;
+          }
+          if(!/[A-Z]/.test($("#password").val())){
+              displayError("#password", "Password must have at least 1 capital letter");
+              return false;
+          }
+          
+          if (!/[!@&%_]/.test($("#password").val())){
+              displayError("#password", "Password must have at least 1 special character: !@&%_");
+              return false;
+          })
+          
+      }
+  </script>
+  
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>Signup Page</h1>
+    </header>
+
+    <div>
+      
+      <fieldset>
+          <legend> Sign Up</legend>
+          
+          First Name:  <input type="text" name="firstName" /> <br />
+          Last Name:   <input type="text" name="lastName" /> <br />
+          email:       <input type="email" name="email" /> <br />
+          Zip Code:    <input type="text" name="zip" id="zip" /> <br />
+          City: <span id="city"></span> <br />
+          Latitude: <span id="latitude"></span><br />
+          Longitude: <span id="longitude"></span><br />
+          <br />
+          State: <input type="text" name="state" id="state"> Use the two-letter abbreviation <br />
+          County: <select id="county"></select><br /><br />
+                    
+          Username: <input type="text" name="username" id="username"/> <span id="usernameError"></span><br />
+          
+          Password: <input type="text" name="password" id="password"/> <span id="passwordError"></span><br />
+          Type Password Again: <input type="text" name="password2" /><br />
+          
+          <input type="submit" value="Sign up!" />
+      </fieldset>
+      
+    </div>
+
+    <footer>
+     <p>&copy; Copyright  by lara4594</p>
+    </footer>
+  </div>
+  
+  <script>
+      
+      $("#zip").change(getCity);
+      $("#username").change(checkUsername);
+      $("#password").change(checkPassword);
+      
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    
+  <meta name="" content="Create a user">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/signupLogin.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <!--add this to every page as well for parse DB*/-->
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+    
+    <title>Create User</title>
+</head>
+<body>
+    
+    <h1> Create a user </h1>
+    
+     <div style="display:none" class="error">
+      Looks like there was a problem saving the object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
+    </div>
+
+    <div style="display:none" class="success">
+      <p>We've just created a new user</p>
+      
+        
+      </div>
+    
+    <div id="fieldsetDiv">
+    	
+    		Username: <input type="text" id="username"> <span id="usernameError"></span> <br />
+    		Password: <input type="password" id="password"> <span id="passwordError"></span> <br />
+			Re-Type Password: <input type="password" id="password2"> <span id="passwordError2"></span> <br />
+            Email: <input type="email" id="email"> <span id="emailError"></span><br />
+    		<input type="button" value="Sign Up!" id="signUp"> <br />
+    </div> 
+    
+    <form class="signup-form">
+          <h2>Sign Up</h2>
+          <div class="error" style="display:none"></div>
+          <input type="text" id="signup-username" placeholder="Username" /><br>
+          <input type="password" id="signup-password" placeholder="Create a Password" /><br>
+          <button>Sign Up</button>
+        </form>
+      </div>
+    </script>
+  
+    
+<script type="text/javascript">
+  $(function() {
+    
+    $("#signUp").click(function(){
+        
+    // Add this line to every page, it sends objects to our database. This is the "Key".
+    Parse.initialize("RohxsyYGrfbFJyo2xnetgt1mxrP0H0gRysZ4XvrV", "0en7QirXn3URQvHlUiZxBWEWTQushXy2PYVBXXKU");
+       
+    var user = new Parse.User();
+    var username = $("#username").val();
+    var password = $("#password").val();
+    var email = $("email").val();
+                     
+    user.set("username", username);
+    user.set("password", password);
+    user.set("email", email);
+        
+    /*user.set("gender", "Male");
+    user.set("name", "Test User12");
+    user.set("pay", "E-4");
+    user.set("phone", "415-392-0202");*/
+        
+   
+                   
+    user.signUp(null, {
+    success: function(user) {
+    // Hooray! Let them use the app now.
+    $(".success").show();
+     },
+    error: function(user, error) {
+    // Show the error message somewhere and let the user try again.
+    alert("Error: " + error.code + " " + error.message);
+      }
+    })
+    };
+   
+    
+ 
+                       
+  </script>
+</body>
+</html>

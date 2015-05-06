@@ -1,0 +1,97 @@
+
+#maintext{
+    float: right;
+    background:#dbdbdb;
+    padding: 20px;
+    
+}
+
+#imageborder{
+    padding: 40px;
+    float: left;
+}
+
+#q5p{
+    padding: 20px;
+    float: left;
+}
+
+td{
+        padding: 10px;
+
+}
+ p{
+     color: white;
+     padding: 20px;
+ }
+
+     img{
+            
+            height: 150px;
+            width: 170px;
+            border: black 10px solid;
+            border-radius: 20px;
+            float:left;
+         background: white;
+            
+        }
+#sprinkler{
+            
+            height: 150px;
+            width: 270px;
+            border: black 10px solid;
+            border-radius: 20px;
+            float:left;
+         background: white;
+            
+        }
+        
+        img:hover {
+            
+            opacity: .5;
+            border: 1px solid blue;
+            transition: all 2s;
+             background: white;
+            
+        }
+    body{
+            font-family: Verdana, Arial, Times New Roman;
+            background-image: url("http://i.imgur.com/IWu99cx.jpg");
+            
+        }
+
+     #wrapper{
+            width: 1200px;
+            margin: auto;
+            background: #cccccc;
+            padding: 20px;
+            border-radius: 25px; 
+        }
+
+    #loginWrapper{
+            width: 700px;
+            margin: auto;
+            background: #cccccc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 25px; 
+        }
+
+    #mainHeader{
+           
+            background: Black; 
+            color: white !important;
+            text-align: center;
+            
+        }
+
+    td{
+           
+            background: #bcbcbc; 
+            color: white !important;
+            text-align: center;
+          
+            
+        }
+
+        

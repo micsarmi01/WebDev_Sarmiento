@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    
+    <script>
+        
+        function ge(element){
+           return document.getElementById(element);
+        }
+    
+        function changeHeading(){
+          //document.getElementById("heading").innerHTML = "This is heading 1";
+          ge("heading").innerHTML = "This is heading 1";
+        }
+        
+        function displayCat(){
+          document.getElementById("animal").innerHTML  = "<img src='img/cat.png'>";
+        }
+        
+        function displayDog(){
+          document.getElementById("animal").innerHTML  = "<img src='img/dog.png'>";
+        }
+        
+        function updateHeading(){
+            document.getElementById("heading").innerHTML = "Hello World!";
+            document.getElementById("heading").style.color = "red";
+            document.getElementById("animal").style.display = "block";
+        }
+        
+        function hideImage(){
+            //document.getElementById("animal").innerHTML  = "";
+            //document.getElementById("animal").style.display = "none";
+            document.getElementById("animal").style.visibility = "hidden";
+        }
+        
+        
+    </script>
+</head>
+
+    <!--  USING JAVASCRIPT
+
+    <body onload="changeHeading();displayCat()">
+
+    <h1 id="heading" onclick="updateHeading()" onmouseenter="displayDog()" onmouseleave="displayCat()"></h1>
+    
+     <div id="animal" onclick="hideImage()">
+     </div>   
+        
+      <input type="button"  onclick="updateHeading()" value="Update Heading"/>
+    -->
+    
+    <body>
+       <h1 id="heading"></h1>
+       <div id="animal"></div>
+    </body>
+
+    
+    <script>
+        
+        $("#heading").html("Using jQuery Now!");
+        $("#animal").html("<img src='img/cat.png'>");
+        
+        $("#heading").click( function(){   
+            $("#animal").html("<img src='img/dog.png'>");   
+         } );
+    
+    </script>
+    
+    
+
+</html>

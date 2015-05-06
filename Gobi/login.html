@@ -1,0 +1,62 @@
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+    <title></title>
+</head>
+<body>
+<form role="form" id="formulario-login">
+                <div class="form-group has-feedback lg left-feedback no-label">
+                  <input type="text" class="form-control no-border input-lg rounded" placeholder="username" autofocus id="user">
+                  <span class="fa fa-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback lg left-feedback no-label">
+                  <input type="password" class="form-control no-border input-lg rounded" placeholder="password" id="pword">
+                  <span class="fa fa-unlock-alt form-control-feedback"></span>
+                </div>
+                <div class="form-group">
+                  <div class="checkbox">
+                    
+                  </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-warning btn-lg btn-perspective btn-block" id="logIn">LOGIN</button>
+                </div>
+            </form>
+    
+    <script>
+        
+        Parse.initialize("RohxsyYGrfbFJyo2xnetgt1mxrP0H0gRysZ4XvrV", "0en7QirXn3URQvHlUiZxBWEWTQushXy2PYVBXXKU");
+        
+$("#logIn").click(function(){
+    
+
+    var username = document.getElementById('user').value;
+    var password = document.getElementById('pword').value;
+
+    alert(username);
+    alert(password);
+
+   /* Parse.User.logIn(username, password, {
+        success: function(user) {
+            alert("deu certo");
+            // Do stuff after successful login.
+        },
+        error: function(user, error) {
+            alert("erro");
+            alert(user + error);
+            // The login failed. Check error to see why.
+        }
+    });*/
+}
+        
+
+       
+    });</script>
+</body>
+</html>
