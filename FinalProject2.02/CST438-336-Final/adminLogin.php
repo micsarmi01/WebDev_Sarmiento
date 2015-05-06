@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>DOD Beneficiary ADMIN Login</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+	
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>DOD Beneficiary ADMIN Web Site Login</h1>
+    </header>
+    
+    <div id="fieldsetDiv">
+    	<form action="includes/loginAdminProcess.php" method="post">
+    		Username: <input type="text" name="username" id="username"> <span id="usernameError"></span> <br />
+    		Password: <input type="password" name="password" id="password"> <span id="passwordError"></span> <br />
+    		<input type="submit" value="Login!" name="loginForm"/>
+        </form>
+        
+         adminUser/adminUser
+    
+	<footer>
+    	<p>&copy; Copyright  by Nickolas Zarzosa, Alex Lamont, Michael Goitia-Sarmiento</p>
+    </footer>
+    </div>
+	  
+  </div>
+</body>
+</html>
